@@ -23,8 +23,8 @@ steps:
     targetType: 'inline'
     script: |
       mkdir "D:\test\copyrepo"
-        $sourceURL = "https://vdpahwzecz4trn4huh2tddmu6rymhucttxswz2ll4kc45ef6h5ha@dev.azure.com/formationw/_git/mirroring"
-        $destURL = "https://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@github.com/naveenvasudevan46/mirroring.git"
+      $sourceURL = "https://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@github.com/Naveen-LinuxAwsguy/Mirroring.git"
+      $destURL = "https://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@github.com/naveenvasudevan46/mirroring.git"
       
       
       Set-Location "D:\test\copyrepo"
@@ -34,10 +34,12 @@ steps:
       Write-Host "*****Git removing remote origin****"
       git remote rm origin
       
-      Write-Output "*****Git remote add****"
-      Write-Output "*****Git fetch origin****"
-         git fetch $sourceURL
-      Write-Output "*****Git push to github ****"
-         git push origin master --all -f
       
+      Write-Output "**Git remote add*"
+      git remote add --mirror=fetch origin $destURL
       
+      Write-Output "**Git fetch origin*"
+      git fetch $destURL
+      
+      Write-Output "**Git push to Azure Repos*"
+      git push origin --all -f
