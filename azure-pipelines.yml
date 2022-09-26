@@ -23,7 +23,7 @@ steps:
     targetType: 'inline'
     script: |
       mkdir "D:\test\copyrepo"
-      $sourceURL = "https://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@dev.azure.com/formationw/_git/mirroring"
+      $sourceURL = "https://xtel3wkb6evfncm7uvdseu74hzgllwmxxv4epe4zwu733rll4gxa@dev.azure.com/formationw/_git/mirroring"
       $destURL = "https://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@github.com/naveenvasudevan46/mirroring.git"
       
       
