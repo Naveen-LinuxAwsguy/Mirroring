@@ -12,8 +12,7 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-- checkout: self
-  persistCredentials: true
+
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
@@ -42,6 +41,9 @@ steps:
       
       Write-Output "**Git fetch origin*"
       git fetch $destURL
+
+      Write-Output "**Git Authenticate**"
+      git remote set-url origin https://Naveen-LinuxAwsguy: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@github.com/Naveen-LinuxAwsguy/Mirroring
       
       Write-Output "**Git push to Azure Repos*"
       git push origin --all -f
