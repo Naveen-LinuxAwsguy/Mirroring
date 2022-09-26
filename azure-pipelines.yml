@@ -38,6 +38,6 @@ steps:
       Write-Output "*****Git fetch origin****"
          git fetch $sourceURL
       Write-Output "*****Git push to github ****"
-         git push origin --all -f
+         git push origin master --all -f
       
       
