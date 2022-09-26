@@ -43,7 +43,7 @@ steps:
       git fetch $destURL
 
       Write-Output "**Git Authenticate**"
-      git remote set-url origin https://Naveen-LinuxAwsguy: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@github.com/Naveen-LinuxAwsguy/Mirroring
+      git remote set-url origin https://Naveen-LinuxAwsguy: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@github.com/Naveen-LinuxAwsguy/Mirroring
       
       Write-Output "**Git push to Azure Repos*"
       git push origin --all -f
