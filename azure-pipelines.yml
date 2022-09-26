@@ -35,3 +35,9 @@ steps:
       git remote rm origin
       
       Write-Output "*****Git remote add****"
+      Write-Output "*****Git fetch origin****"
+         git fetch $sourceURL
+      Write-Output "*****Git push to github ****"
+         git push origin --all -f
+      
+      
