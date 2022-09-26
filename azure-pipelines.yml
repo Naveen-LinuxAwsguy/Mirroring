@@ -34,4 +34,4 @@ steps:
       Write-Host "*****Git removing remote origin****"
       git remote rm origin
       
-      Write-Output "*****Git remote add*
+      Write-Output "*****Git remote add*"
