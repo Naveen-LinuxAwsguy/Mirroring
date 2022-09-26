@@ -1,0 +1,37 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      mkdir "D:\test\copyrepo"
+      $sourceURL = "https://i5kgpnz33atsgtpulg2r3qgoxxvtfgbimljndxiovsnqsrffvyaa@dev.azure.com/kubefreak/Mirroring/"
+      $destURL = "https://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@github.com/Naveen-LinuxAwsguy/Mirroring.git"
+      
+      
+      Set-Location "D:\test\copyrepo"
+      git clone --mirror $sourceURL
+      
+      Set-Location "D:\test\copyrepo\mirroring.git"
+      Write-Host "*****Git removing remote origin****"
+      git remote rm origin
+      
+      Write-Output "*****Git remote add*
